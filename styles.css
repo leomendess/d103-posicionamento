@@ -1,0 +1,82 @@
+body {
+margin: 0;
+font-family: sans-serif;
+}
+
+/* p{
+    text-align: center;
+font-size: 1rem;
+}
+
+.pai{
+    border: 1px solid black;
+    height: 300px;
+    width: 90vw;
+    margin: 5%;
+}
+
+.filho
+{background-color: silver;
+height: 300px;
+width: 90vw;
+margin: 5%;}
+
+img{
+    display: block;
+    width: 98vw;
+    align-items: center;
+}
+
+
+.banner {
+    background-image: url(http://www.folhadaregiao.com.br/wp-content/uploads/2018/06/leaf-3369412_1920-1024x455.jpg);
+    background-position: center; 
+    background-size: cover;
+    background-repeat:no-repeat; 
+    height: 50vw;
+    width: 100vw;
+} */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 25vw); 
+    grid-template-rows: repeat(4, auto); 
+    grid-template-areas: 
+    "header header header header"
+    "main main . sidebar"
+    "main main . ."
+    "footer footer footer footer";
+}
+header{
+    align-items: center;
+    grid-area: header;
+    background-color: blueviolet;
+    display: flex;
+justify-content: space-between;
+padding: 0 10px;
+}
+header h3{
+    color: lightgray;
+}
+header nav {
+    display: flex;
+    justify-content: space-around;
+    width: 30%
+}
+
+header nav a{
+    color: lightgray;
+    text-decoration: none;
+}
+
+main{grid-area: main;
+    background-color: brown
+}
+.sidebar{
+    grid-area: sidebar;
+    background-color: aqua
+}
+footer{
+    grid-area: footer;
+background-color: rgb(41, 248, 0);
+}
